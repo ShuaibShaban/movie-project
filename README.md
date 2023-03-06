@@ -1,71 +1,93 @@
-# Getting Started with Create React App
+### MOVIE-FINDER
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Description
 
-## Available Scripts
+MOVIE-FINDER is a web application that allows users to search for a specific movie, update the details about the movie, add new movies to the database and delete the movies from my database.
 
-In the project directory, you can run:
+Getting Started
 
-### `npm start`
+In oredr for you to use the content on this repo ensure you have the following:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- A computer that runs on either of windows 7, Linux,Ubuntu.
+  -nodejs 9.0+
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Features
 
-### `npm test`
+## Display List of Movies
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+click on the search form to search for a movie available in my api. 
 
-### `npm run build`
+- My api backend link    https://github.com/ShuaibShaban/phase-3-sinatra-react-project  
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- movies gets fetched from my backend and are displayed at my frontend on cards.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Displays the details about the movie
 
-### `npm run eject`
+- click on one card and it will display a full card with the entire information about the movie
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Updating the information about a movie
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- click on the add button there will be a form that allows a user to enter the properties of the movie and when the addd button is clicked a new movie appears. Only users who have added movies to the database are allowed to update the movies.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Login & sign up
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- Click on the login button a dummy login it will redirect the user to the page with a dummy login form for thr user to fill
 
-## Learn More
+Development inatallation
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Requirements
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+In order for you to use the content on this repo ensure you have the following:
 
-### Code Splitting
+-A computer that runs on either of the following; (Windows 7+, Linux, Mac OS).
+-nodejs 9.0+
+-Visual Studio Code.
+-Live server extension.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+# Alternative One
 
-### Analyzing the Bundle Size
+-Open a terminal / command line interface on your computer.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+-Clone the repo by using the following to create a copy on your local machine:
 
-### Making a Progressive Web App
+git@github.com:ShuaibShaban/Movie-Finder-App.git
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- change directory to the repo folder:
 
-### Advanced Configuration
+  cd Movie-finder
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- Open it in Visual Studio Code
 
-### Deployment
+  code .
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Alternative Two
+-On the top right corner of this page there is a button labelled Fork.
 
-### `npm run build` fails to minify
+-Click on that button to fork the repo to your own account.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# movie-project
+-Take on the process in Alternative One above.
+
+    git@github.com:ShuaibShaban/Movie-Finder-App.git
+
+Running the application
+To run the application, you can use the following steps to run the app.
+- Run `npm install` to install the required dependencies.
+
+        npm install
+
+Run npm start to open the application on your browser.
+
+     npm start
+
+
+-Repeat the steps on the `features` section above
+
+Author
+
+- Shuaib Shaban
+
+License
+The project is licensed under the MIT license
+
+

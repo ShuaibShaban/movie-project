@@ -98,7 +98,7 @@ const Homepage=()=>{
 
   return (
     <div className="App">
-      <h1>Movieflix</h1>
+      <h1>Movie finder</h1>
       <Header />
       <Link to="/add" className="btn btn-main">
                 + Add
