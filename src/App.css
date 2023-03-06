@@ -11,9 +11,10 @@
 }
 
 body {
-    background-color: #530606;
+    background-color: black;
     font-family: "Poppins", sans-serif;
     margin: 0;
+    color: white;
     }
     /* header {
     background-color: #363636;
