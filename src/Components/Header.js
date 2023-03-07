@@ -1,7 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import AddMovie from "./AddMovie";
+import Search from "./Search";
 
 export const Header = () => {
+  const [showAddForm, setShowAddForm] = useState(false);
+  const [showSearchForm, setShowSearchForm] = useState(false);
+
+  const handleAddButtonClick = () => {
+    setShowAddForm(!showAddForm);
+    setShowSearchForm(false);
+  };
+
+  const handleSearchButtonClick = () => {
+    setShowSearchForm(!showSearchForm);
+    setShowAddForm(false);
+  };
+
   return (
     <header>
       <div className="container">
@@ -20,15 +35,18 @@ export const Header = () => {
             </li>
 
             <li>
-              <Link to="/add" className="btn btn-main">
+              <button className="btn btn-main" onClick={handleAddButtonClick}>
                 + Add
-              </Link>
+              </button>
+              {showAddForm && <AddMovie />}
             </li>
+            
             <li>
-              <Link to="/search" className="btn btn-main">
+              <button className="btn btn-main" onClick={handleSearchButtonClick}>
                 + Search
-              </Link>
-              </li>
+              </button>
+              {showSearchForm && <Search />}
+            </li>
           </ul>
         </div>
       </div>

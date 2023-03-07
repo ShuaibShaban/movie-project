@@ -1,6 +1,6 @@
-import React from "react";
-import { useState } from "react";
-import { useCallback } from "react";
+import React, { useCallback, useState } from "react";
+import MovieList from "./MovieList";
+
 const searchBar = {
   display: "flex",
   justifyContent: "right",
@@ -14,29 +14,73 @@ const input = {
   marginBottom: "30px",
   fontSize: "15px",
 };
-function Search({  setSearchTerm }) {
+
+export default function Search() {
   const [searchTerm, setSearch] = useState("");
+  const [searchResults, setSearchResults] = useState([]);
+
+  const handleSearch = async () => {
+    try {
+      const response = await fetch(`/movies?search=${searchTerm}`);
+      if (response.ok) {
+        const data = await response.json();
+        setSearchResults(data.movies);
+      } else {
+        console.error("Failed to search for movies.");
+      }
+    } catch (error) {
+      console.error("Failed to search for movies:", error);
+    }
+  };
+
+  const delayedSearch = useCallback(
+    debounce(handleSearch, 500),
+    [searchTerm]
+  );
+
   const handleChange = useCallback((event) => {
-    setSearch(event.target.value);
-  }, []);
-  function handleSearch(e) {
-    e.preventDefault();
-    setSearchTerm(searchTerm);
-  }
+    const searchTerm = event.target.value;
+    setSearch(searchTerm);
+    if (searchTerm) {
+      delayedSearch();
+    } else {
+      setSearchResults([]);
+    }
+  }, [delayedSearch]);
+
   return (
-    <div style={searchBar}>
-      <input
-        type="text"
-        name="search"
-        placeholder="keyword/title"
-        value={searchTerm}
-        style={input}
-        onChange={handleChange}
-      />
-      <button onClick={handleSearch} style={input}>
-        Search
-      </button>
+    <div>
+      <form onSubmit={(event) => {
+        event.preventDefault();
+        handleSearch();
+      }}>
+        <div style={searchBar}>
+          <input
+            type="text"
+            name="search"
+            placeholder="Search by keyword or title"
+            value={searchTerm}
+            style={input}
+            onChange={handleChange}
+          />
+          <button type="submit" className="btn btn-main">
+            Search
+          </button>
+        </div>
+      </form>
+      {searchResults.length > 0 && <MovieList movies={searchResults} />}
     </div>
   );
 }
-export default Search;
+
+function debounce(fn, delay) {
+  let timer;
+  return function (...args) {
+    if (timer) {
+      clearTimeout(timer);
+    }
+    timer = setTimeout(() => {
+      fn.apply(this, args);
+    }, delay);
+  };
+}

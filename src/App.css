@@ -14,7 +14,8 @@ body {
     background-color: black;
     font-family: "Poppins", sans-serif;
     margin: 0;
-    color: white;
+    color :#fefefe;
+
     }
     /* header {
     background-color: #363636;
@@ -23,7 +24,7 @@ body {
     font-display:inherit;
     } */
     h1{
-    color: whitesmoke;
+    color: orange;
     align-self: center;
     margin-left: 28rem;
     font-weight: 100%;
@@ -44,10 +45,10 @@ body {
     .search::placeholder {
     color: #7378c5;
     }
-    .search:focus {
+    /* .search:focus {
     background-color: red;
     outline: none;
-    }
+    } */
     .btn {
         padding: 10px 15px;
         background-color: var(--secondary);
@@ -61,12 +62,12 @@ body {
         transition: all 0.3s ease;
         line-height: 1.1;
       }
-
+/* 
 .btn:hover {
     background-color: #1aa762;
     opacity: 1;
     cursor: pointer;
-  }
+  } */
   
   .btn:disabled {
     pointer-events: none;
@@ -79,12 +80,13 @@ body {
     display: inline-block;
     flex-wrap: wrap;
     padding: 33.33px;
-    margin:-10px 0 0 -10px;
+    margin:-10px  -30px;
+    gap: 2px;
     position: relative;
     }
-    .movie {
+    /* .movie {
     background-color: #373b69;
-    border-radius: 3px;
+    border-radius: 6px;
     box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
     overflow: hidden;
     position: relative;
@@ -95,15 +97,15 @@ body {
     font-weight: bold;
     }
     .movie img {
-    width: 100%;
-    display: flex;
+    width: 300%;
+    display: inline-block;
     flex-wrap: wrap;
     padding: 5%;
     margin:-10px 0 0 -10px;
     position: relative;
     }
     .movie-info {
-    color: #eee;
+    color: orange;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -128,7 +130,7 @@ body {
     }
     .movie-info span.red {
     color: rgb(189, 42, 42);
-    }
+    } */
     .overview {
     background-color: #fff;
     padding: 2rem;
@@ -163,7 +165,7 @@ body {
 
 .container {
   padding-right: 15px;
-  padding-left: 15px;
+  padding-left: 50px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -260,6 +262,7 @@ header .nav-links {
 header .nav-links li {
   display: inline-block;
   margin-right: 30px;
+  color: orange;
 }
 
 header .nav-links li:last-child {
@@ -382,8 +385,8 @@ header .nav-links li:last-child {
 }
 
 .movie-card img {
-  width: 100%;
-  display: block;
+  width: 500%;
+  display: inline-block;
 }
 
 .movie-card .overlay {
@@ -402,7 +405,7 @@ header .nav-links li:last-child {
 
 .movie-card .inner-card-controls {
   display: inline;
-  background-color: red;
+
   position: absolute;
   bottom: 20px;
   left: 50%;
@@ -437,5 +440,129 @@ header .nav-links li:last-child {
   color: #c4c4c4;
   font-size: 3rem;
   text-align: center;
+}
+
+
+.card {
+  display: inline-block;
+  width: calc(25% - 20px);
+  margin: 10px;
+  position: relative;
+  width: 100%;
+}
+
+.card:hover {
+  box-shadow: 0 0 15px rgba(255, 165, 0, 0.5);
+}
+
+.card_image {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+}
+
+.card_image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card_content {
+  padding: 10px;
+}
+
+.card_title {
+  font-size: 1.2rem;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.card_text {
+  margin: 0;
+  margin-bottom: 5px;
+}
+
+.upcharge {
+  display: inline-block;
+  margin-top: 5px;
+  background-color: #f6f6f6;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.upcharge_text {
+  font-size: 0.8rem;
+  margin-left: 5px;
+}
+
+button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #555;
+}
+
+.card {
+  display: flex;
+  display: inline-block;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  /* background-color: var(--purple); */
+  border-radius: 5px 25px 5px 50px;
+  transition: transform 0.1s linear, box-shadow 0.2s;
+  width: 20rem;
+  height: 30rem;
+  display: inline-block;
+  margin: 50px;
+}
+
+.add-movie-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+textarea {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.submit-button {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.submit-button:hover {
+  background-color: #0069d9;
 }
 

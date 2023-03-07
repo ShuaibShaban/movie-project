@@ -3,7 +3,8 @@ import { useEffect } from "react";
 import './Home.module.css'
 import MovieCard from "./MovieCard";
 import { Header } from "./Header";
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
+import '../App.css'
 
 let API_key="&api_key=db95773a7fb212ba790d71f6adac0e7e";
 let base_url="https://api.themoviedb.org/3";
@@ -98,10 +99,10 @@ const Homepage=()=>{
 
   return (
     <div className="App">
-      <h1>Movie finder</h1>
+      <h1>Movies</h1>
       <Header />
       <Link to="/add" className="btn btn-main">
-                + Add
+                +ADD
               </Link>
       <div style={{display:"flex", autoresize: "max-width: 100%", height: "auto", border: "0.5px, solid"}}>
           {movieArray}

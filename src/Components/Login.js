@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-//import '../App.css'
+
 export default function Login() {
     return (
         <div className="text-center login-body m-5 auto">

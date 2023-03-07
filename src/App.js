@@ -12,13 +12,14 @@ import WatchLater from './Components/WatchLater'
 import './App.css'
 import UpdateMovie from './Components/UpdateMovie'
 import { Header } from './Components/Header'
+import Search from './Components/Search'
 
 export default function App() {
   return (
 
     <Router>
       <div>
-        
+
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/login" element={<Login />} />
